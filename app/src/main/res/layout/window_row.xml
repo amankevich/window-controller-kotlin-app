@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_margin="8dp"
+        android:background="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+        <TextView
+                android:id="@+id/window_row_name"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Bedroom"/>
+
+        <TextView
+                android:id="@+id/window_row_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Bayern Munchen"/>
+
+        <TextView
+                android:id="@+id/window_row_connected"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Connected" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

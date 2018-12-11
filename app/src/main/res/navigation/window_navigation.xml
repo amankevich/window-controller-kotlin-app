@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/window_navigation"
+            app:startDestination="@id/windowBlindListFragment">
+
+    <fragment android:id="@+id/windowBlindListFragment"
+              android:name="by.squareroot.windowcontroller.ui.WindowBlindListFragment"
+              android:label="@string/fragment_title_window_blinds_list"
+              tools:layout="@layout/fragment_windowblind_list">
+        <action android:id="@+id/action_to_orange_pi"
+                app:destination="@id/control_orange_pi"/>
+        <action android:id="@+id/action_create_new"
+                app:destination="@id/newWindowBlindFragment"/>
+        <action android:id="@+id/action_to_node_mcu"
+                app:destination="@id/control_node_mcu"/>
+    </fragment>
+
+    <fragment android:id="@+id/control_orange_pi"
+              android:name="by.squareroot.windowcontroller.ui.WindowBlindControlOrangePIFragment"
+              android:label="@string/fragment_title_window_blinds_control"
+              tools:layout="@layout/fragment_windowblind_control">
+        <action android:id="@+id/control_to_edit"
+                app:destination="@id/windowBlindEditFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/control_node_mcu"
+              android:name="by.squareroot.windowcontroller.ui.WindowBlindControlNodeMCUFragment"
+              android:label="@string/fragment_title_window_blinds_control"
+              tools:layout="@layout/fragment_windowblind_control">
+        <action android:id="@+id/control_to_edit"
+                app:destination="@id/windowBlindEditFragment"/>
+        <action android:id="@+id/control_node_mcu_to_settings" app:destination="@id/windowControllerSettingsFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/newWindowBlindFragment"
+              android:name="by.squareroot.windowcontroller.ui.NewWindowBlindFragment"
+              android:label="@string/fragment_title_window_blinds_new"
+              tools:layout="@layout/fragment_new_window_blind"/>
+
+    <fragment android:id="@+id/windowBlindEditFragment"
+              android:name="by.squareroot.windowcontroller.ui.WindowBlindEditFragment"
+              tools:layout="@layout/fragment_new_window_blind"
+              android:label="@string/menu_action_edit"/>
+
+    <fragment android:id="@+id/windowControllerSettingsFragment"
+              android:name="by.squareroot.windowcontroller.ui.WindowControllerSettingsFragment"
+              android:label="fragment_windowblind_settings" tools:layout="@layout/fragment_windowblind_settings"/>
+
+</navigation>
